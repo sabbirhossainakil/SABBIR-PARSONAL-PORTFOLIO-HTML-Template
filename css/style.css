@@ -223,7 +223,7 @@ li {
 .header .header-navbar .header-burger-menu {
   display: none;
 }
-.header .header-navbar .header-burger-menu svg path{
+.header .header-navbar .header-burger-menu svg path {
   fill: var(--primary);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -232,7 +232,7 @@ li {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
-.header .header-navbar .header-burger-menu:hover svg path{
+.header .header-navbar .header-burger-menu:hover svg path {
   fill: #2196f3;
 }
 .header .header-navbar .header-navbar-logo a {
@@ -1444,6 +1444,13 @@ li {
   font-size: 0.875rem;
   display: flex;
 }
+.footer_bottom .footer_copyright p {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--primary);
+}
 .footer-link-wrapper {
   font-variation-settings: "wght" 450;
   cursor: pointer;
@@ -1453,18 +1460,8 @@ li {
   transition: all 0.3s ease-in-out;
   font-size: 2rem;
 }
-
 .footer-link-wrapper:hover {
-  font-variation-settings: "wght" 550;
-}
-.footer-link-wrapper.visibility-custom {
-  display: block;
-}
-.footer_bottom .footer_copyright p {
-  font-family: var(--body-font-family);
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  color: var(--secondary-text);
+  color: #2196f3;
 }
 /* ==========================
  FOOTER SECTION END 
@@ -1794,4 +1791,415 @@ COUNTER SECTION START
    ========================== */
 /* ===========================================================
  SERVICES PAGE END 
+   =========================================================== */
+/* ===========================================================
+ CONTACT PAGE START 
+   =========================================================== */
+#contact-page header {
+  background-color: var(--white);
+}
+.contact-section {
+  background-color: var(--white);
+  padding: 142px 0px 160px;
+  position: relative;
+  z-index: 2;
+}
+.contact-section .section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+.contact-section .section-title span {
+  font-family: var(--body-font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-section .section-title span .line {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary);
+}
+.contact-section .section-title h2 {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -3.36px;
+  color: var(--primary-text);
+}
+.contact-section .contact-content {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+}
+.contact-section .contact-content .map {
+  width: 772px;
+}
+.contact-section .contact-content .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-section .contact-content .contact-info h2 {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 56px;
+  letter-spacing: -1.61px;
+  color: var(--primary-text);
+}
+.contact-section .contact-content .contact-info p {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.45px;
+  color: #7a7a7a;
+}
+.contact-section .contact-content .contact-info p a {
+  cursor: pointer;
+}
+.contact-section .contact-content .contact-info .social-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+.contact-section .contact-content .contact-info .social-links a {
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--primary-text);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.contact-section .contact-content .contact-info .social-links a:hover {
+  color: #2196f3;
+}
+.contact-section .contact-form {
+  margin-top: 80px;
+  display: flex;
+  align-items: start;
+  gap: 60px;
+}
+.contact-section .contact-form .contact-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-section .contact-form .contact-form-content h2 {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -1.61px;
+  color: var(--primary-text);
+}
+.contact-section .contact-form .contact-form-content p {
+  width: 383px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.45px;
+  color: #7a7a7a;
+}
+.contact-section .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 541px;
+}
+.contact-section .contact-form form .form-group {
+  border-bottom: 2px solid var(--primary-text);
+}
+.contact-section .contact-form form .form-group input {
+  width: 100%;
+  padding: 16px 16px;
+  border: none;
+  outline: none;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.45px;
+  color: var(--black-text);
+}
+.contact-section .contact-form form .form-group input::placeholder {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.45px;
+  color: #7a7a7a;
+}
+.contact-section .contact-form form .form-group textarea {
+  width: 100%;
+  height: 68px !important;
+  padding: 16px 16px;
+  border: none;
+  outline: none;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.45px;
+  color: var(--black-text);
+  resize: none;
+}
+.contact-section .contact-form form .form-group textarea::placeholder {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -0.45px;
+  color: #7a7a7a;
+}
+.contact-section .contact-form form .contact-form-btn-wrap {
+  margin-top: 24px;
+}
+.contact-section .contact-form form .contact-form-btn-wrap .contact-form-btn {
+  border: none;
+}
+
+/* ===========================================================
+ CONTACT PAGE END 
+   =========================================================== */
+/* ===========================================================
+ ABOUT PAGE START 
+   =========================================================== */
+/* ==========================
+ PAGE TOP SECTION START 
+   ========================== */
+#about-page .page-top .page-top-content .page-top-title h2 span {
+  font-family: var(--body-font-family-2);
+}
+/* ==========================
+ PAGE TOP SECTION END 
+   ========================== */
+/* ==========================
+ ABOUT SECTION START 
+   ========================== */
+.about-section {
+  margin-top: 320px;
+  position: relative;
+  z-index: 2;
+  background-color: var(--body-bg);
+  padding: 150px 0px 130px;
+}
+.about-section .about-section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.about-section .about-section-title h2 {
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--primary-text);
+}
+.about-section .about-section-title h2 span {
+  font-family: var(--body-font-family-2);
+}
+.about-section .about-section-title .about-social-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+}
+.about-section .about-section-title .about-social-wrap p {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--black-text);
+  transform: rotate(90deg);
+  margin: 20px 0px 30px -20px;
+}
+.about-section .about-section-title .about-social-wrap ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.about-section .about-section-title .about-social-wrap ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border: 1px solid #dbdbdb;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.about-section .about-section-title .about-social-wrap ul li a:hover,
+.about-section .about-section-title .about-social-wrap ul li .active {
+  background-color: var(--secondary);
+}
+.about-section .about-section-title .about-social-wrap ul li a svg path {
+  fill: var(--black-text);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.about-section .about-section-title .about-social-wrap ul li a:hover svg path,
+.about-section .about-section-title .about-social-wrap ul li .active svg path {
+  fill: var(--white);
+}
+.about-section .about-content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-section .about-content-wrap p {
+  width: 771px;
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--primary-text);
+}
+/* ==========================
+ ABOUT SECTION END 
+   ========================== */
+
+/* ==========================
+ WORK EXPERIENCE SECTION Start 
+   ========================== */
+.work-experience {
+  position: relative;
+  z-index: 2;
+  background-color: var(--body-bg);
+}
+
+.work-experience .section-title h2 {
+  font-family: var(--body-font-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: var(--secondary-text);
+  margin-bottom: 50px;
+}
+.work-experience .experience-container {
+  background: rgba(59, 59, 59, 0.2);
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 160px;
+  padding: 60px 40px 40px 40px;
+}
+.work-experience .experience-container .experience {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+}
+.work-experience .experience-container .experience .skill {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.work-experience .experience-container .experience .skill .skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-experience .experience-container .experience .skill .skill-item span {
+  font-family: var(--body-font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-feature-settings: "calt" off, "kern" off;
+  color: var(--black-text);
+}
+.work-experience
+  .experience-container
+  .experience
+  .skill
+  .skill-item
+  .percentage {
+  font-family: var(--body-font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-feature-settings: "calt" off, "kern" off;
+  color: var(--black-text);
+}
+.work-experience .experience-container .experience .skill .progress-bar {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+.work-experience
+  .experience-container
+  .experience
+  .skill
+  .progress-bar
+  .progress {
+  height: 100%;
+  width: 0;
+  transition: width 1s ease-in-out;
+  background: var(--secondary);
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+/* ==========================
+ WORK EXPERIENCE SECTION END 
+   ========================== */
+/* ==========================
+AWARDS SECTION START 
+   ========================== */
+#about-page .award {
+  padding: 130px 0px 220px;
+}
+/* ==========================
+AWARDS SECTION END 
+   ========================== */
+/* ===========================================================
+ ABOUT PAGE END 
    =========================================================== */

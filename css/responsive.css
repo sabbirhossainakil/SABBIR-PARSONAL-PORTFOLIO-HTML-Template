@@ -72,6 +72,22 @@ TESTIMONIALS SECTION END
   /* ===========================================================
  SERVICES PAGE END 
    =========================================================== */
+
+  /* ===========================================================
+ ABOUT PAGE END 
+   =========================================================== */
+  /* ==========================
+ ABOUT SECTION START 
+   ========================== */
+  .about-section .about-content-wrap p {
+    width: auto;
+  }
+  /* ==========================
+ ABOUT SECTION END 
+   ========================== */
+  /* ===========================================================
+ ABOUT PAGE END 
+   =========================================================== */
 }
 
 /* For screens with a maximum width of 1199px (smaller desktops, laptops, and tablets in landscape orientation) */
@@ -219,6 +235,48 @@ COUNTER SECTION END
    ========================== */
   /* ===========================================================
  SERVICES PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ CONTACT PAGE START 
+   =========================================================== */
+  .contact-section .section-title h2 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  .contact-section .contact-form .contact-form-content h2 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  .contact-section {
+    padding: 80px 0px 160px;
+  }
+  /* ===========================================================
+ CONTACT PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ ABOUT PAGE END 
+   =========================================================== */
+  /* ==========================
+ ABOUT SECTION START 
+   ========================== */
+  .about-section {
+    padding: 80px 0px;
+  }
+  .about-section .about-section-title h2 {
+    font-size: 64px;
+    line-height: 100%;
+  }
+  .work-experience .experience-container {
+    gap: 60px;
+  }
+  #about-page .award {
+    padding: 80px 0px 220px;
+  }
+  /* ==========================
+ ABOUT SECTION END 
+   ========================== */
+  /* ===========================================================
+ ABOUT PAGE END 
    =========================================================== */
 }
 
@@ -446,6 +504,91 @@ TESTIMONIALS SECTION END
   /* ===========================================================
  SERVICES PAGE END 
    =========================================================== */
+  /* ===========================================================
+ CONTACT PAGE START 
+   =========================================================== */
+  .contact-section .section-title h2 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .contact-section .section-title {
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+  .contact-section .section-title span {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .contact-section .contact-content {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .contact-section .contact-form {
+    margin-top: 48px;
+    gap: 30px;
+    flex-direction: column;
+  }
+  .contact-section .contact-form form {
+    width: 100%;
+  }
+  .contact-section .contact-content .map {
+    width: 100%;
+  }
+  .contact-section .contact-form .contact-form-content {
+    gap: 8px;
+  }
+  /* ===========================================================
+ CONTACT PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ ABOUT PAGE END 
+   =========================================================== */
+  /* ==========================
+ ABOUT SECTION START 
+   ========================== */
+  .about-section .about-section-title .about-social-wrap {
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+  .about-section .about-section-title .about-social-wrap p {
+    margin: 0;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+  .about-section .about-section-title .about-social-wrap ul {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+  .about-section .about-section-title {
+    margin-bottom: 48px;
+  }
+
+  /* ==========================
+ ABOUT SECTION END 
+   ========================== */
+  /* ==========================
+ WORK EXPERIENCE SECTION START 
+   ========================== */
+  .work-experience .section-title h2 {
+    font-size: 40px;
+    line-height: 56px;
+    margin-bottom: 48px;
+  }
+  .work-experience .experience-container {
+    gap: 26px;
+    flex-direction: column;
+  }
+  /* ==========================
+ WORK EXPERIENCE SECTION END 
+   ========================== */
+  /* ===========================================================
+ ABOUT PAGE END 
+   =========================================================== */
 }
 
 /* For screens with a maximum width of 767px (tablets in portrait orientation, large smartphones, and smaller laptops) */
@@ -629,10 +772,10 @@ COUNTER SECTION START
   /* ==========================
 COUNTER SECTION END 
    ========================== */
-     /* ==========================
+  /* ==========================
  PRICING SECTION START 
    ========================== */
-   .pricing {
+  .pricing {
     padding-bottom: 80px;
     margin-bottom: 80px;
   }
@@ -650,6 +793,57 @@ COUNTER SECTION END
    ========================== */
   /* ===========================================================
  SERVICES PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ CONTACT PAGE START 
+   =========================================================== */
+  .contact-section .section-title h2 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .contact-section .contact-content .contact-info h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .contact-section .contact-form .contact-form-content h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .contact-section .contact-form .contact-form-content p {
+    width: auto;
+  }
+  /* ===========================================================
+ CONTACT PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ ABOUT PAGE END 
+   =========================================================== */
+  /* ==========================
+ ABOUT SECTION START 
+   ========================== */
+  .about-section {
+    margin-top: 230px;
+  }
+  .about-section .about-section-title h2 {
+    font-size: 48px;
+    line-height: 100%;
+  }
+  /* ==========================
+ ABOUT SECTION END 
+   ========================== */
+     /* ==========================
+ WORK EXPERIENCE SECTION START 
+   ========================== */
+   .work-experience .section-title h2 {
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 48px;
+  }
+  /* ==========================
+ WORK EXPERIENCE SECTION END 
+   ========================== */
+  /* ===========================================================
+ ABOUT PAGE END 
    =========================================================== */
 }
 
@@ -846,10 +1040,10 @@ TESTIMONIALS SECTION END
   /* ==========================
  PAGE TOP SECTION END 
    ========================== */
-   /* ==========================
+  /* ==========================
  PRICING SECTION START 
    ========================== */
-   .pricing .pricing-section-title h2 {
+  .pricing .pricing-section-title h2 {
     font-size: 36px;
     line-height: 150%;
   }
@@ -861,6 +1055,67 @@ TESTIMONIALS SECTION END
    ========================== */
   /* ===========================================================
  SERVICES PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ CONTACT PAGE START 
+   =========================================================== */
+  .contact-section .section-title h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .contact-section .section-title span {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .contact-section .section-title span .line {
+    display: inline-block;
+    width: 36px;
+    height: 2px;
+    background-color: var(--primary);
+  }
+  .contact-section .contact-content .contact-info h2 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .contact-section .contact-form .contact-form-content h2 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  /* ===========================================================
+ CONTACT PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ ABOUT PAGE END 
+   =========================================================== */
+  /* ==========================
+ ABOUT SECTION START 
+   ========================== */
+  .about-section {
+    padding: 48px 0px;
+  }
+  .about-section .about-section-title h2 {
+    font-size: 40px;
+    line-height: 100%;
+  }
+  /* ==========================
+ ABOUT SECTION END 
+   ========================== */
+        /* ==========================
+ WORK EXPERIENCE SECTION START 
+   ========================== */
+   .work-experience .section-title h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 48px;
+  }
+  .work-experience .experience-container {
+    padding: 40px 30px 30px 30px;
+  }
+  /* ==========================
+ WORK EXPERIENCE SECTION END 
+   ========================== */
+  /* ===========================================================
+ ABOUT PAGE END 
    =========================================================== */
 }
 
@@ -934,10 +1189,10 @@ TESTIMONIALS SECTION END
   /* ==========================
  PAGE TOP SECTION END 
    ========================== */
-    /* ==========================
+  /* ==========================
  PRICING SECTION START 
    ========================== */
-   .pricing .pricing-section-title h2 {
+  .pricing .pricing-section-title h2 {
     font-size: 32px;
     line-height: 150%;
   }

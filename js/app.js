@@ -188,19 +188,19 @@ const pricingswiper = new Swiper(".pricing-swiper", {
   spaceBetween: 30,
   loop: true,
   speed: 900,
-  centeredSlides: true, 
+  centeredSlides: true,
   breakpoints: {
     320: {
-      slidesPerView: 1, 
+      slidesPerView: 1,
       spaceBetween: 10,
     },
     768: {
-      slidesPerView: 2, 
+      slidesPerView: 2,
       spaceBetween: 20,
-      centeredSlides: false, 
+      centeredSlides: false,
     },
     1200: {
-      slidesPerView: 3, 
+      slidesPerView: 3,
       spaceBetween: 30,
     },
   },
@@ -209,6 +209,65 @@ const pricingswiper = new Swiper(".pricing-swiper", {
 /* ==========================
  PRICING SECTION END 
    ========================== */
+/* ==========================
+ BACK TO TOP  START 
+   ========================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopButton = document.getElementById("back-to-top");
+
+  if (backToTopButton) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+
+    backToTopButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+});
+
+/* ==========================
+ BACK TO TOP  END 
+   ========================== */
+/* ==========================
+ABOUT PAGE  START 
+   ========================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress");
+
+  const animateProgressBar = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const percentage = bar.getAttribute("data-percentage");
+        bar.style.width = `${percentage}%`;
+        observer.unobserve(bar);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(animateProgressBar, {
+    root: null,
+    threshold: 0.1,
+  });
+
+  progressBars.forEach((bar) => {
+    observer.observe(bar);
+  });
+});
+
+/* ==========================
+ABOUT PAGE  END 
+   ========================== */
+// ---------
 let tlTop = null;
 let tlBottom = null;
 let windowWidth = window.innerWidth;
