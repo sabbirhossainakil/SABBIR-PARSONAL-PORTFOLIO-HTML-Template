@@ -278,6 +278,25 @@ COUNTER SECTION END
   /* ===========================================================
  ABOUT PAGE END 
    =========================================================== */
+  /* ===========================================================
+ PORTFOLIO PAGE START 
+   =========================================================== */
+  #portfolio-page .portfolio {
+    margin-top: 380px;
+    padding-bottom: 120px;
+  }
+  #portfolio-page
+    .portfolio
+    .portfolio-swiper-modules
+    .portfolio-swiper-scrollbar {
+    width: 492px;
+    height: 2px;
+    overflow: hidden;
+  }
+
+  /* ===========================================================
+ PORTFOLIO PAGE END 
+   =========================================================== */
 }
 
 /* For screens with a maximum width of 991px (tablets in portrait orientation and smaller laptops) */
@@ -589,6 +608,23 @@ TESTIMONIALS SECTION END
   /* ===========================================================
  ABOUT PAGE END 
    =========================================================== */
+  /* ===========================================================
+ PORTFOLIO PAGE START 
+   =========================================================== */
+
+  #portfolio-page
+    .portfolio
+    .portfolio-swiper-modules
+    .portfolio-swiper-scrollbar {
+    width: 392px;
+    height: 2px;
+  }
+  #portfolio-page .portfolio .portfolio-swiper {
+    margin-bottom: 60px;
+  }
+  /* ===========================================================
+ PORTFOLIO PAGE END 
+   =========================================================== */
 }
 
 /* For screens with a maximum width of 767px (tablets in portrait orientation, large smartphones, and smaller laptops) */
@@ -831,10 +867,10 @@ COUNTER SECTION END
   /* ==========================
  ABOUT SECTION END 
    ========================== */
-     /* ==========================
+  /* ==========================
  WORK EXPERIENCE SECTION START 
    ========================== */
-   .work-experience .section-title h2 {
+  .work-experience .section-title h2 {
     font-size: 36px;
     line-height: 48px;
     margin-bottom: 48px;
@@ -844,6 +880,27 @@ COUNTER SECTION END
    ========================== */
   /* ===========================================================
  ABOUT PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ PORTFOLIO PAGE START 
+   =========================================================== */
+
+  #portfolio-page
+    .portfolio
+    .portfolio-swiper-modules
+    .portfolio-swiper-scrollbar {
+    width: 292px;
+    height: 2px;
+  }
+  #portfolio-page .portfolio .portfolio-swiper {
+    margin-bottom: 60px;
+  }
+  #portfolio-page .portfolio {
+    margin-top: 300px;
+    padding-bottom: 120px;
+  }
+  /* ===========================================================
+ PORTFOLIO PAGE END 
    =========================================================== */
 }
 
@@ -855,12 +912,18 @@ COUNTER SECTION END
   .footer .footer-copyright ul {
     gap: 24px;
   }
-  /* ==========================
- FOOTER SECTION END 
-   ========================== */
   .footer_bottom {
     display: flex;
     flex-direction: column;
+  }
+  /* ==========================
+ FOOTER SECTION END 
+   ========================== */
+   .mobile-nav ul li a {
+    font-size: 2.5em;
+  }
+  .mobile-nav ul li {
+    margin: 20px 0;
   }
 }
 /* For screens with a maximum width of 420px (smaller smartphones in portrait orientation) */
@@ -1100,10 +1163,10 @@ TESTIMONIALS SECTION END
   /* ==========================
  ABOUT SECTION END 
    ========================== */
-        /* ==========================
+  /* ==========================
  WORK EXPERIENCE SECTION START 
    ========================== */
-   .work-experience .section-title h2 {
+  .work-experience .section-title h2 {
     font-size: 32px;
     line-height: 42px;
     margin-bottom: 48px;
@@ -1116,6 +1179,30 @@ TESTIMONIALS SECTION END
    ========================== */
   /* ===========================================================
  ABOUT PAGE END 
+   =========================================================== */
+  /* ===========================================================
+ PORTFOLIO PAGE START 
+   =========================================================== */
+
+  #portfolio-page .portfolio .portfolio-swiper-modules {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    flex-direction: column;
+    gap: 24px;
+  }
+  #portfolio-page .portfolio .portfolio-swiper-modules .portfolio-swiper-pagination {
+    order: 2;
+  }
+  #portfolio-page .portfolio .portfolio-swiper-modules .portfolio-swiper-scrollbar {
+    order: 1;
+  }
+  #portfolio-page .portfolio .portfolio-swiper-modules .portfolio-swiper-button-wrap {
+    order: 3;
+  }
+  /* ===========================================================
+ PORTFOLIO PAGE END 
    =========================================================== */
 }
 

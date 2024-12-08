@@ -267,6 +267,62 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ==========================
 ABOUT PAGE  END 
    ========================== */
+
+/* ==========================
+PORTFOLIO PAGE  START 
+   ========================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const portfolio = document.querySelector(".portfolio");
+
+  if (portfolio) {
+    const portfolioSwiper = new Swiper(".portfolio-swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 14,
+      loop: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".portfolio-swiper-button-next",
+        prevEl: ".portfolio-swiper-button-prev",
+      },
+      pagination: {
+        el: ".portfolio-swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          if (index < 3) {
+            return `<span class="${className}"></span>`;
+          }
+          return '';
+        },
+      },
+      scrollbar: {
+        el: ".portfolio-swiper-scrollbar",
+        // hide: true,
+      },
+      freeMode: {
+        enabled: true,
+        momentum: false, 
+      },
+    });
+
+    portfolio.addEventListener("mouseenter", () => {
+      portfolioSwiper.autoplay.stop();
+    });
+
+    portfolio.addEventListener("mouseleave", () => {
+      portfolioSwiper.autoplay.start();
+    });
+  } else {
+    console.warn("portfolio' not found.");
+  }
+});
+/* ==========================
+PORTFOLIO PAGE  END 
+   ========================== */
 // ---------
 let tlTop = null;
 let tlBottom = null;
@@ -382,7 +438,7 @@ tl2.from(".header-navbar-logo a", {
   y: -50,
   duration: 1,
   ease: "power2.out",
-});
+},"a");
 
 tl2.from(".header-menu-item", {
   scale: 0.8,
@@ -391,6 +447,12 @@ tl2.from(".header-menu-item", {
   duration: 0.6,
   ease: "back.out(1.7)",
 });
+tl2.from(".header-burger-menu ", {
+  opacity: 0,
+  y: -50,
+  duration: 1,
+  ease: "power2.out",
+},"a");
 gsap.registerPlugin(ScrollTrigger);
 const tl3 = gsap.timeline({
   defaults: {

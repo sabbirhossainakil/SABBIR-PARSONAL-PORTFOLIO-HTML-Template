@@ -382,6 +382,7 @@ li {
   font-family: var(--body-font-family);
   color: var(--white-text);
   font-size: 3em;
+  text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -2202,4 +2203,316 @@ AWARDS SECTION END
    ========================== */
 /* ===========================================================
  ABOUT PAGE END 
+   =========================================================== */
+/* ===========================================================
+ PORTFOLIO PAGE START 
+   =========================================================== */
+#portfolio-page .portfolio {
+  margin-top: 430px;
+  position: relative;
+  z-index: 2;
+  background-color: var(--body-bg);
+  padding-bottom: 150px;
+}
+#portfolio-page .portfolio .portfolio-slide {
+  position: relative;
+  border: 1px solid #f7f7ff;
+  border-radius: 24px;
+  padding: 12px;
+}
+#portfolio-page .portfolio .portfolio-slide .portfolio-slide-image img {
+  width: 100%;
+}
+#portfolio-page .portfolio .portfolio-slide .portfolio-slide-content {
+  /* visibility: hidden; */
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 23px;
+  right: 23px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+  border: 1px solid var(--secondary-text);
+  box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 38px;
+  padding: 20px 18px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+#portfolio-page .portfolio .portfolio-slide:hover .portfolio-slide-content {
+  /* visibility: visible; */
+  opacity: 1;
+  bottom: 52px;
+}
+#portfolio-page .portfolio .portfolio-slide .portfolio-slide-content:hover {
+  background: linear-gradient(
+    180deg,
+    #bea2a2 0%,
+    rgba(255, 200, 19, 0.822) 100%
+  );
+}
+#portfolio-page .portfolio .portfolio-slide .portfolio-slide-content h3 {
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170%;
+  color: var(--secondary);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+#portfolio-page .portfolio .portfolio-slide .portfolio-slide-content:hover h3 {
+  color: var(--white-text);
+}
+#portfolio-page
+  .portfolio
+  .portfolio-slide
+  .portfolio-slide-content
+  .portfolio-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white-text);
+  border: 1px solid #515260;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#portfolio-page .portfolio .swiper-slide {
+  width: auto !important;
+}
+#portfolio-page .portfolio .swiper-wrapper {
+  transition-timing-function: linear;
+}
+#portfolio-page .portfolio .portfolio-swiper-modules {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-pagination
+  .swiper-pagination-bullet {
+  width: 9.75px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--secondary);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-pagination
+  .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--secondary);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-button-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-button-wrap
+  a {
+  width: 39px;
+  height: 40px;
+  border: 1px solid #515260;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-button-wrap
+  a:hover,
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-button-wrap
+  .active {
+  background-color: var(--secondary);
+  color: var(--white-text);
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-button-wrap
+  a
+  svg
+  path {
+  fill: var(--secondary);
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-button-wrap
+  a:hover
+  svg
+  path,
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-button-wrap
+  .active
+  svg
+  path {
+  fill: var(--white-text);
+}
+#portfolio-page .portfolio .portfolio-swiper {
+  margin-bottom: 90px;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-scrollbar {
+  width: 684px;
+  height: 2px;
+  background: var(--white);
+  box-shadow: 0px 0px 6.4px rgba(0, 0, 0, 0.04),
+    160px 64px 240px rgba(0, 0, 0, 0.14), 192px 80px 288px rgba(0, 0, 0, 0.1);
+  opacity: 10;
+  /* overflow: hidden; */
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-scrollbar
+  .swiper-scrollbar-drag {
+  width: 104px !important;
+  height: 2px;
+  background: #000000;
+  border: 1px solid #252525;
+  position: relative;
+  overflow: initial;
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-scrollbar
+  .swiper-scrollbar-drag::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left:-5px;
+  width: 5px;
+  height: 5px;
+  background: #000000;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  opacity: 2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 15;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+#portfolio-page
+  .portfolio
+  .portfolio-swiper-modules
+  .portfolio-swiper-scrollbar
+  .swiper-scrollbar-drag::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right:-5px;
+  width: 5px;
+  height: 5px;
+  background: #000000;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  opacity: 2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 15;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+/* ===========================================================
+ PORTFOLIO PAGE END 
    =========================================================== */
