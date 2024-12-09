@@ -2462,7 +2462,7 @@ AWARDS SECTION END
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left:-5px;
+  left: -5px;
   width: 5px;
   height: 5px;
   background: #000000;
@@ -2492,7 +2492,7 @@ AWARDS SECTION END
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right:-5px;
+  right: -5px;
   width: 5px;
   height: 5px;
   background: #000000;
