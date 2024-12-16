@@ -57,7 +57,7 @@ body {
   font-family: var(--body-font-family);
   font-weight: normal;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background: var(--body-bg);
 }
 
@@ -725,6 +725,9 @@ li {
 /* ==========================
  PORTFOLIO SECTION START 
    ========================== */
+.portfolio {
+  overflow-x: hidden;
+}
 .portfolio .section-title {
   display: flex;
   flex-direction: column;

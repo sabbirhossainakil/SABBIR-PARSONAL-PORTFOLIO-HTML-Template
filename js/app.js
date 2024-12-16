@@ -1,49 +1,49 @@
-const lenis = new Lenis({
-  duration: 0.8,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  direction: "vertical",
-  gestureDirection: "vertical",
-  smooth: true,
-  mouseMultiplier: 1,
-  smoothTouch: false,
-  touchMultiplier: 2,
-  infinite: false,
-});
+// const lenis = new Lenis({
+//   duration: 0.3,
+//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//   direction: "vertical",
+//   gestureDirection: "vertical",
+//   smooth: true,
+//   mouseMultiplier: 1,
+//   smoothTouch: false,
+//   touchMultiplier: 2,
+//   infinite: false,
+// });
 
 // get scroll value
-lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-  console.log({
-    scroll,
-    limit,
-    velocity,
-    direction,
-    progress,
-  });
-});
+// lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+//   console.log({
+//     scroll,
+//     limit,
+//     velocity,
+//     direction,
+//     progress,
+//   });
+// });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 //
-function createScrollTrigger(triggerElement, timeline) {
-  ScrollTrigger.create({
-    trigger: triggerElement,
-    start: "top bottom",
-    onLeaveBack: () => {
-      timeline.progress(0);
-      timeline.pause();
-    },
-  });
-  ScrollTrigger.create({
-    trigger: triggerElement,
-    start: "top 80%",
-    onEnter: () => timeline.play(),
-  });
-}
+// function createScrollTrigger(triggerElement, timeline) {
+//   ScrollTrigger.create({
+//     trigger: triggerElement,
+//     start: "top bottom",
+//     onLeaveBack: () => {
+//       timeline.progress(0);
+//       timeline.pause();
+//     },
+//   });
+//   ScrollTrigger.create({
+//     trigger: triggerElement,
+//     start: "top 80%",
+//     onEnter: () => timeline.play(),
+//   });
+// }
 /* ==========================
  NAVBAR SECTION START 
    ========================== */
@@ -537,61 +537,158 @@ tl3.from(".about-info-wrap .about-info", {
   stagger: 0.3,
 });
 
+const tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".portfolio",
+    scroller: "body",
+    start: "top 30%",
+    end: "top -60%",
+    // markers: true,
+    scrub: 2,
+    // toggleActions: "play none none none",
+  },
+});
+
+tl4.from(".section-title span", {
+  opacity: 0,
+  y: 30,
+  duration: 0.5,
+  ease: "power3.out",
+});
+tl4.from(".section-title h2", {
+  opacity: 0,
+  y: 30,
+  duration: 0.5,
+  ease: "power3.out",
+});
+tl4.from(
+  ".line1.left",
+  {
+    opacity: 0,
+    x: -300,
+    duration: 0.5,
+    ease: "power3.out",
+  },
+  "line1"
+);
+tl4.from(
+  ".line1.right",
+  {
+    opacity: 0,
+    x: 300,
+    duration: 0.5,
+    ease: "power3.out",
+  },
+  "line1"
+);
+tl4.from(
+  ".line2.left",
+  {
+    opacity: 0,
+    x: -300,
+    duration: 0.5,
+    ease: "power3.out",
+  },
+  "line2"
+);
+tl4.from(
+  ".line2.right",
+  {
+    opacity: 0,
+    x: 300,
+    duration: 0.5,
+    ease: "power3.out",
+  },
+  "line2"
+);
+tl4.from(
+  ".line3.left",
+  {
+    opacity: 0,
+    x: -300,
+    duration: 0.5,
+    ease: "power3.out",
+  },
+  "line3"
+);
+tl4.from(
+  ".line3.right",
+  {
+    opacity: 0,
+    x: 300,
+    duration: 0.5,
+    ease: "power3.out",
+  },
+  "line3"
+);
+tl4.from(" .portfolio-btn-wrap .portfolio-btn", {
+  opacity: 0,
+  y: 30,
+  duration: 1,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".portfolio-btn-wrap",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 1,
+    // markers: true,
+  },
+});
 // AOS.init({
-//   offset: 100,
-//   duration: 100,
-//   easing: "ease-out-back",
+//   duration: 1000,
 //   once: true,
 // });
-AOS.init({
-  duration: 1000,
-  once: true,
-});
-const tl4 = gsap.timeline({
+
+const tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: ".services",
     scroller: "body",
     start: "top 80%",
     end: "top 0%",
     // markers: true,
-    // scrub: 1,
-    // toggleActions: "play none none none",
+    scrub: 2,
   },
 });
 
-tl4.from(".services .section-title span", {
+tl5.from(" .services .section-title span", {
   opacity: 0,
   y: 30,
   duration: 0.5,
   ease: "power3.out",
 });
-tl4.from(".services .section-title h2", {
+tl5.from(" .services .section-title h2", {
   opacity: 0,
   y: 30,
   duration: 0.5,
   ease: "power3.out",
 });
+tl5.from(".services .row .col-sm-12", {
+  opacity: 0,
+  y: 80,
+  duration: 0.6,
+  stagger: 0.2,
+  ease: "power1.out",
+});
 
-
-const tl5 = gsap.timeline({
+const tl6 = gsap.timeline({
   scrollTrigger: {
     trigger: ".award",
     scroller: "body",
     start: "top 60%",
     end: "top 0%",
     // markers: true,
-    scrub: 1,
-    toggleActions: "play none none none",
+    scrub: 2,
+    // toggleActions: "play none none none",
   },
 });
 
-tl5.from(".award .awards-header h2", {
+tl6.from(".award .awards-header h2", {
   opacity: 0,
   y: 30,
   duration: 0.5,
   ease: "power3.out",
 });
-tl5.from(".award-list .award-row", {
+tl6.from(".award-list .award-row", {
   opacity: 0,
   y: 50,
   duration: 1,
@@ -599,7 +696,7 @@ tl5.from(".award-list .award-row", {
   ease: "power3.out",
 });
 
-let tl6 = gsap.timeline({
+let tl7 = gsap.timeline({
   scrollTrigger: {
     trigger: ".testimonials",
     start: "top 50%",
@@ -609,7 +706,7 @@ let tl6 = gsap.timeline({
   },
 });
 
-tl6
+tl7
   .from(".testimonials .section-title-wrap", {
     opacity: 0,
     y: 100,
@@ -640,17 +737,18 @@ tl6
     ease: "power4.out",
   });
 
-let tl7 = gsap.timeline({
+let tl8 = gsap.timeline({
   scrollTrigger: {
     trigger: ".footer",
-    start: "top 80%",
-    end: "bottom top",
+    scroller: "body",
+    start: "top 50%",
+    end: "top 20%",
     scrub: 1,
-    // markers: true,
+    markers: true,
   },
 });
 
-tl7
+tl8
   .from(".footer .heading-style-h1", {
     opacity: 0,
     y: 50,
