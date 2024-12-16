@@ -1,49 +1,49 @@
-// const lenis = new Lenis({
-//   duration: 0.3,
-//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//   direction: "vertical",
-//   gestureDirection: "vertical",
-//   smooth: true,
-//   mouseMultiplier: 1,
-//   smoothTouch: false,
-//   touchMultiplier: 2,
-//   infinite: false,
-// });
+const lenis = new Lenis({
+  duration: 0.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(1, -10 * t)),
+  direction: "vertical",
+  gestureDirection: "vertical",
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+});
 
 // get scroll value
-// lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-//   console.log({
-//     scroll,
-//     limit,
-//     velocity,
-//     direction,
-//     progress,
-//   });
-// });
+lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+  console.log({
+    scroll,
+    limit,
+    velocity,
+    direction,
+    progress,
+  });
+});
 
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
 
-// requestAnimationFrame(raf);
+requestAnimationFrame(raf);
 
-//
-// function createScrollTrigger(triggerElement, timeline) {
-//   ScrollTrigger.create({
-//     trigger: triggerElement,
-//     start: "top bottom",
-//     onLeaveBack: () => {
-//       timeline.progress(0);
-//       timeline.pause();
-//     },
-//   });
-//   ScrollTrigger.create({
-//     trigger: triggerElement,
-//     start: "top 80%",
-//     onEnter: () => timeline.play(),
-//   });
-// }
+function createScrollTrigger(triggerElement, timeline) {
+  ScrollTrigger.create({
+    trigger: triggerElement,
+    start: "top bottom",
+    onLeaveBack: () => {
+      timeline.progress(0);
+      timeline.pause();
+    },
+  });
+  ScrollTrigger.create({
+    trigger: triggerElement,
+    start: "top 80%",
+    onEnter: () => timeline.play(),
+  });
+}
+
 /* ==========================
  NAVBAR SECTION START 
    ========================== */
