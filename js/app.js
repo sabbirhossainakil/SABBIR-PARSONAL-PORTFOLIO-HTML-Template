@@ -541,11 +541,10 @@ const tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: ".portfolio",
     scroller: "body",
-    start: "top 30%",
-    end: "top -60%",
+    start: "top 60%",
+    end: "top -20%",
     // markers: true,
     scrub: 2,
-    // toggleActions: "play none none none",
   },
 });
 
@@ -588,6 +587,13 @@ tl4.from(
     x: -300,
     duration: 0.5,
     ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".line2.left",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+      // markers: true,
+    },
   },
   "line2"
 );
@@ -598,6 +604,13 @@ tl4.from(
     x: 300,
     duration: 0.5,
     ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".line2.right",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+      // markers: true,
+    },
   },
   "line2"
 );
@@ -608,6 +621,13 @@ tl4.from(
     x: -300,
     duration: 0.5,
     ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".line3.left",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+      // markers: true,
+    },
   },
   "line3"
 );
@@ -618,6 +638,13 @@ tl4.from(
     x: 300,
     duration: 0.5,
     ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".line3.right",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+      // markers: true,
+    },
   },
   "line3"
 );
@@ -643,24 +670,19 @@ const tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: ".services",
     scroller: "body",
-    start: "top 80%",
+    start: "top 60%",
     end: "top 0%",
     // markers: true,
-    scrub: 2,
+    scrub: 4,
   },
 });
 
-tl5.from(" .services .section-title span", {
+tl5.from(".section-title span, .section-title h2", {
   opacity: 0,
   y: 30,
   duration: 0.5,
   ease: "power3.out",
-});
-tl5.from(" .services .section-title h2", {
-  opacity: 0,
-  y: 30,
-  duration: 0.5,
-  ease: "power3.out",
+  stagger: 0.2,
 });
 tl5.from(".services .row .col-sm-12", {
   opacity: 0,
@@ -710,19 +732,15 @@ tl7
   .from(".testimonials .section-title-wrap", {
     opacity: 0,
     y: 100,
-    duration: 1,
+    duration: 0.5,
     ease: "power4.out",
   })
-  .from(
-    ".testimonials .testimonials-btn-wrap",
-    {
-      opacity: 0,
-      y: -100,
-      duration: 1,
-      ease: "power4.out",
-    },
-    "-=1"
-  )
+  .from(".testimonials .testimonials-btn-wrap", {
+    opacity: 0,
+    y: -100,
+    duration: 0.5,
+    ease: "power4.out",
+  })
   .from(".testimonials .swiper-slide", {
     opacity: 0,
     y: 100,
@@ -743,8 +761,8 @@ let tl8 = gsap.timeline({
     scroller: "body",
     start: "top 50%",
     end: "top 20%",
-    scrub: 1,
-    markers: true,
+    scrub: 2,
+    // markers: true,
   },
 });
 
@@ -752,7 +770,7 @@ tl8
   .from(".footer .heading-style-h1", {
     opacity: 0,
     y: 50,
-    duration: 1,
+    duration: 0.5,
     ease: "power3.out",
   })
   .from(
@@ -760,7 +778,7 @@ tl8
     {
       opacity: 0,
       y: 50,
-      duration: 1.5,
+      duration: 0.5,
       ease: "power3.out",
     },
     "-=0.5"
@@ -770,7 +788,7 @@ tl8
     {
       opacity: 0,
       x: -50,
-      duration: 1,
+      duration: 0.5,
       ease: "power3.out",
     },
     "-=1"
@@ -780,7 +798,7 @@ tl8
     {
       opacity: 0,
       x: 50,
-      duration: 1,
+      duration: 0.5,
       ease: "power3.out",
     },
     "-=0.8"
@@ -790,7 +808,7 @@ tl8
     {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 0.5,
       ease: "power3.out",
     },
     "-=1.5"
@@ -800,7 +818,7 @@ tl8
     {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 0.5,
       ease: "power3.out",
     },
     "-=1.5"
