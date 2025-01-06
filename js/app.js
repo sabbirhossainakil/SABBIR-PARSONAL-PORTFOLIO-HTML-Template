@@ -1,48 +1,48 @@
-const lenis = new Lenis({
-  duration: 0.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(1, -10 * t)),
-  direction: "vertical",
-  gestureDirection: "vertical",
-  smooth: true,
-  mouseMultiplier: 1,
-  smoothTouch: false,
-  touchMultiplier: 2,
-  infinite: false,
-});
+// const lenis = new Lenis({
+//   duration: 0.2,
+//   easing: (t) => Math.min(1, 1.001 - Math.pow(1, -10 * t)),
+//   direction: "vertical",
+//   gestureDirection: "vertical",
+//   smooth: true,
+//   mouseMultiplier: 1,
+//   smoothTouch: false,
+//   touchMultiplier: 2,
+//   infinite: false,
+// });
 
-// get scroll value
-lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-  console.log({
-    scroll,
-    limit,
-    velocity,
-    direction,
-    progress,
-  });
-});
+// // get scroll value
+// lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+//   console.log({
+//     scroll,
+//     limit,
+//     velocity,
+//     direction,
+//     progress,
+//   });
+// });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
-function createScrollTrigger(triggerElement, timeline) {
-  ScrollTrigger.create({
-    trigger: triggerElement,
-    start: "top bottom",
-    onLeaveBack: () => {
-      timeline.progress(0);
-      timeline.pause();
-    },
-  });
-  ScrollTrigger.create({
-    trigger: triggerElement,
-    start: "top 80%",
-    onEnter: () => timeline.play(),
-  });
-}
+// function createScrollTrigger(triggerElement, timeline) {
+//   ScrollTrigger.create({
+//     trigger: triggerElement,
+//     start: "top bottom",
+//     onLeaveBack: () => {
+//       timeline.progress(0);
+//       timeline.pause();
+//     },
+//   });
+//   ScrollTrigger.create({
+//     trigger: triggerElement,
+//     start: "top 80%",
+//     onEnter: () => timeline.play(),
+//   });
+// }
 
 /* ==========================
  NAVBAR SECTION START 
@@ -473,356 +473,356 @@ tl2.from(
   },
   "a"
 );
-gsap.registerPlugin(ScrollTrigger);
-const tl3 = gsap.timeline({
-  defaults: {
-    ease: "power3.out",
-    duration: 0.5,
-  },
-  scrollTrigger: {
-    trigger: ".about",
-    start: "top 50%",
-    end: "top 10%",
-  },
-});
+// gsap.registerPlugin(ScrollTrigger);
+// const tl3 = gsap.timeline({
+//   defaults: {
+//     ease: "power3.out",
+//     duration: 0.5,
+//   },
+//   scrollTrigger: {
+//     trigger: ".about",
+//     start: "top 50%",
+//     end: "top 10%",
+//   },
+// });
 
-tl3.from(".about-img", {
-  opacity: 0,
-  width: 0,
-  duration: 0.5,
-  ease: "power2.out",
-});
+// tl3.from(".about-img", {
+//   opacity: 0,
+//   width: 0,
+//   duration: 0.5,
+//   ease: "power2.out",
+// });
 
-tl3.from(".about-content h2", {
-  opacity: 0,
-  y: 30,
-  rotationX: 10,
-  scale: 0.9,
-  duration: 0.5,
-  ease: "power3.out",
-});
+// tl3.from(".about-content h2", {
+//   opacity: 0,
+//   y: 30,
+//   rotationX: 10,
+//   scale: 0.9,
+//   duration: 0.5,
+//   ease: "power3.out",
+// });
 
-tl3.from(".about-content h3", {
-  opacity: 0,
-  y: 30,
-  rotationX: 10,
-  scale: 0.9,
-  duration: 0.5,
-  ease: "power3.out",
-});
+// tl3.from(".about-content h3", {
+//   opacity: 0,
+//   y: 30,
+//   rotationX: 10,
+//   scale: 0.9,
+//   duration: 0.5,
+//   ease: "power3.out",
+// });
 
-tl3.from(".about-content p", {
-  opacity: 0,
-  y: 30,
-  rotationX: 10,
-  scale: 0.9,
-  duration: 0.5,
-  ease: "power3.out",
-});
-tl3.from(".about-btn-wrap", {
-  opacity: 0,
-  y: 30,
-  rotationX: 10,
-  scale: 0.9,
-  duration: 0.5,
-  ease: "power3.out",
-});
-tl3.from(".about-info-wrap .about-info", {
-  opacity: 0,
-  y: 30,
-  rotationX: 10,
-  scale: 0.9,
-  duration: 0.5,
-  ease: "power3.out",
-  stagger: 0.3,
-});
+// tl3.from(".about-content p", {
+//   opacity: 0,
+//   y: 30,
+//   rotationX: 10,
+//   scale: 0.9,
+//   duration: 0.5,
+//   ease: "power3.out",
+// });
+// tl3.from(".about-btn-wrap", {
+//   opacity: 0,
+//   y: 30,
+//   rotationX: 10,
+//   scale: 0.9,
+//   duration: 0.5,
+//   ease: "power3.out",
+// });
+// tl3.from(".about-info-wrap .about-info", {
+//   opacity: 0,
+//   y: 30,
+//   rotationX: 10,
+//   scale: 0.9,
+//   duration: 0.5,
+//   ease: "power3.out",
+//   stagger: 0.3,
+// });
 
-const tl4 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".portfolio",
-    scroller: "body",
-    start: "top 60%",
-    end: "top -20%",
-    // markers: true,
-    scrub: 2,
-  },
-});
+// const tl4 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".portfolio",
+//     scroller: "body",
+//     start: "top 60%",
+//     end: "top -20%",
+//     markers: true,
+//     scrub: 2,
+//   },
+// });
 
-tl4.from(".section-title span", {
-  opacity: 0,
-  y: 30,
-  duration: 0.5,
-  ease: "power3.out",
-});
-tl4.from(".section-title h2", {
-  opacity: 0,
-  y: 30,
-  duration: 0.5,
-  ease: "power3.out",
-});
-tl4.from(
-  ".line1.left",
-  {
-    opacity: 0,
-    x: -300,
-    duration: 0.5,
-    ease: "power3.out",
-  },
-  "line1"
-);
-tl4.from(
-  ".line1.right",
-  {
-    opacity: 0,
-    x: 300,
-    duration: 0.5,
-    ease: "power3.out",
-  },
-  "line1"
-);
-tl4.from(
-  ".line2.left",
-  {
-    opacity: 0,
-    x: -300,
-    duration: 0.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".line2.left",
-      start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-      // markers: true,
-    },
-  },
-  "line2"
-);
-tl4.from(
-  ".line2.right",
-  {
-    opacity: 0,
-    x: 300,
-    duration: 0.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".line2.right",
-      start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-      // markers: true,
-    },
-  },
-  "line2"
-);
-tl4.from(
-  ".line3.left",
-  {
-    opacity: 0,
-    x: -300,
-    duration: 0.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".line3.left",
-      start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-      // markers: true,
-    },
-  },
-  "line3"
-);
-tl4.from(
-  ".line3.right",
-  {
-    opacity: 0,
-    x: 300,
-    duration: 0.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".line3.right",
-      start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-      // markers: true,
-    },
-  },
-  "line3"
-);
-tl4.from(" .portfolio-btn-wrap .portfolio-btn", {
-  opacity: 0,
-  y: 30,
-  duration: 1,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".portfolio-btn-wrap",
-    start: "top 80%",
-    end: "top 50%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+// tl4.from(".section-title span", {
+//   opacity: 0,
+//   y: 30,
+//   duration: 0.5,
+//   ease: "power3.out",
+// });
+// tl4.from(".section-title h2", {
+//   opacity: 0,
+//   y: 30,
+//   duration: 0.5,
+//   ease: "power3.out",
+// });
+// tl4.from(
+//   ".line1.left",
+//   {
+//     opacity: 0,
+//     x: -300,
+//     duration: 0.5,
+//     ease: "power3.out",
+//   },
+//   "line1"
+// );
+// tl4.from(
+//   ".line1.right",
+//   {
+//     opacity: 0,
+//     x: 300,
+//     duration: 0.5,
+//     ease: "power3.out",
+//   },
+//   "line1"
+// );
+// tl4.from(
+//   ".line2.left",
+//   {
+//     opacity: 0,
+//     x: -300,
+//     duration: 0.5,
+//     ease: "power3.out",
+//     scrollTrigger: {
+//       trigger: ".line2.left",
+//       start: "top 80%",
+//       end: "top 50%",
+//       scrub: 1,
+//       markers: true,
+//     },
+//   },
+//   "line2"
+// );
+// tl4.from(
+//   ".line2.right",
+//   {
+//     opacity: 0,
+//     x: 300,
+//     duration: 0.5,
+//     ease: "power3.out",
+//     scrollTrigger: {
+//       trigger: ".line2.right",
+//       start: "top 80%",
+//       end: "top 50%",
+//       scrub: 1,
+//       markers: true,
+//     },
+//   },
+//   "line2"
+// );
+// tl4.from(
+//   ".line3.left",
+//   {
+//     opacity: 0,
+//     x: -300,
+//     duration: 0.5,
+//     ease: "power3.out",
+//     scrollTrigger: {
+//       trigger: ".line3.left",
+//       start: "top 80%",
+//       end: "top 50%",
+//       scrub: 1,
+//       // markers: true,
+//     },
+//   },
+//   "line3"
+// );
+// tl4.from(
+//   ".line3.right",
+//   {
+//     opacity: 0,
+//     x: 300,
+//     duration: 0.5,
+//     ease: "power3.out",
+//     scrollTrigger: {
+//       trigger: ".line3.right",
+//       start: "top 80%",
+//       end: "top 50%",
+//       scrub: 1,
+//       markers: true,
+//     },
+//   },
+//   "line3"
+// );
+// tl4.from(" .portfolio-btn-wrap .portfolio-btn", {
+//   opacity: 0,
+//   y: 30,
+//   duration: 1,
+//   ease: "power3.out",
+//   scrollTrigger: {
+//     trigger: ".portfolio-btn-wrap",
+//     start: "top 80%",
+//     end: "top 50%",
+//     scrub: 1,
+//     markers: true,
+//   },
+// });
 // AOS.init({
 //   duration: 1000,
 //   once: true,
 // });
 
-const tl5 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".services",
-    scroller: "body",
-    start: "top 60%",
-    end: "top 0%",
-    // markers: true,
-    scrub: 4,
-  },
-});
+// const tl5 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".services",
+//     scroller: "body",
+//     start: "top 60%",
+//     end: "top 0%",
+//     // markers: true,
+//     scrub: 4,
+//   },
+// });
 
-tl5.from(".section-title span, .section-title h2", {
-  opacity: 0,
-  y: 30,
-  duration: 0.5,
-  ease: "power3.out",
-  stagger: 0.2,
-});
-tl5.from(".services .row .col-sm-12", {
-  opacity: 0,
-  y: 80,
-  duration: 0.6,
-  stagger: 0.2,
-  ease: "power1.out",
-});
+// tl5.from(".section-title span, .section-title h2", {
+//   opacity: 0,
+//   y: 30,
+//   duration: 0.5,
+//   ease: "power3.out",
+//   stagger: 0.2,
+// });
+// tl5.from(".services .row .col-sm-12", {
+//   opacity: 0,
+//   y: 80,
+//   duration: 0.6,
+//   stagger: 0.2,
+//   ease: "power1.out",
+// });
 
-const tl6 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".award",
-    scroller: "body",
-    start: "top 60%",
-    end: "top 0%",
-    // markers: true,
-    scrub: 2,
-    // toggleActions: "play none none none",
-  },
-});
+// const tl6 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".award",
+//     scroller: "body",
+//     start: "top 60%",
+//     end: "top 0%",
+//     // markers: true,
+//     scrub: 2,
+//     // toggleActions: "play none none none",
+//   },
+// });
 
-tl6.from(".award .awards-header h2", {
-  opacity: 0,
-  y: 30,
-  duration: 0.5,
-  ease: "power3.out",
-});
-tl6.from(".award-list .award-row", {
-  opacity: 0,
-  y: 50,
-  duration: 1,
-  stagger: 0.3,
-  ease: "power3.out",
-});
+// tl6.from(".award .awards-header h2", {
+//   opacity: 0,
+//   y: 30,
+//   duration: 0.5,
+//   ease: "power3.out",
+// });
+// tl6.from(".award-list .award-row", {
+//   opacity: 0,
+//   y: 50,
+//   duration: 1,
+//   stagger: 0.3,
+//   ease: "power3.out",
+// });
 
-let tl7 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".testimonials",
-    start: "top 50%",
-    end: "bottom top",
-    scrub: 1,
-    // markers: true,
-  },
-});
+// let tl7 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".testimonials",
+//     start: "top 50%",
+//     end: "bottom top",
+//     scrub: 1,
+//     // markers: true,
+//   },
+// });
 
-tl7
-  .from(".testimonials .section-title-wrap", {
-    opacity: 0,
-    y: 100,
-    duration: 0.5,
-    ease: "power4.out",
-  })
-  .from(".testimonials .testimonials-btn-wrap", {
-    opacity: 0,
-    y: -100,
-    duration: 0.5,
-    ease: "power4.out",
-  })
-  .from(".testimonials .swiper-slide", {
-    opacity: 0,
-    y: 100,
-    stagger: 0.3,
-    duration: 1.5,
-    ease: "power4.out",
-  })
-  .to(".testimonials .swiper-slide", {
-    opacity: 1,
-    y: 0,
-    duration: 1.5,
-    ease: "power4.out",
-  });
+// tl7
+//   .from(".testimonials .section-title-wrap", {
+//     opacity: 0,
+//     y: 100,
+//     duration: 0.5,
+//     ease: "power4.out",
+//   })
+//   .from(".testimonials .testimonials-btn-wrap", {
+//     opacity: 0,
+//     y: -100,
+//     duration: 0.5,
+//     ease: "power4.out",
+//   })
+//   .from(".testimonials .swiper-slide", {
+//     opacity: 0,
+//     y: 100,
+//     stagger: 0.3,
+//     duration: 1.5,
+//     ease: "power4.out",
+//   })
+//   .to(".testimonials .swiper-slide", {
+//     opacity: 1,
+//     y: 0,
+//     duration: 1.5,
+//     ease: "power4.out",
+//   });
 
-let tl8 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".footer",
-    scroller: "body",
-    start: "top 50%",
-    end: "top 20%",
-    scrub: 2,
-    // markers: true,
-  },
-});
+// let tl8 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".footer",
+//     scroller: "body",
+//     start: "top 50%",
+//     end: "top 20%",
+//     scrub: 2,
+//     // markers: true,
+//   },
+// });
 
-tl8
-  .from(".footer .heading-style-h1", {
-    opacity: 0,
-    y: 50,
-    duration: 0.5,
-    ease: "power3.out",
-  })
-  .from(
-    ".footer .footer_contact-wrapper",
-    {
-      opacity: 0,
-      y: 50,
-      duration: 0.5,
-      ease: "power3.out",
-    },
-    "-=0.5"
-  )
-  .from(
-    ".footer .link-mail_one",
-    {
-      opacity: 0,
-      x: -50,
-      duration: 0.5,
-      ease: "power3.out",
-    },
-    "-=1"
-  )
-  .from(
-    ".footer .link-mail_two",
-    {
-      opacity: 0,
-      x: 50,
-      duration: 0.5,
-      ease: "power3.out",
-    },
-    "-=0.8"
-  )
-  .from(
-    ".footer .footer_copyright",
-    {
-      opacity: 0,
-      y: 50,
-      duration: 0.5,
-      ease: "power3.out",
-    },
-    "-=1.5"
-  )
-  .from(
-    ".footer #back-to-top",
-    {
-      opacity: 0,
-      y: 50,
-      duration: 0.5,
-      ease: "power3.out",
-    },
-    "-=1.5"
-  );
+// tl8
+//   .from(".footer .heading-style-h1", {
+//     opacity: 0,
+//     y: 50,
+//     duration: 0.5,
+//     ease: "power3.out",
+//   })
+//   .from(
+//     ".footer .footer_contact-wrapper",
+//     {
+//       opacity: 0,
+//       y: 50,
+//       duration: 0.5,
+//       ease: "power3.out",
+//     },
+//     "-=0.5"
+//   )
+//   .from(
+//     ".footer .link-mail_one",
+//     {
+//       opacity: 0,
+//       x: -50,
+//       duration: 0.5,
+//       ease: "power3.out",
+//     },
+//     "-=1"
+//   )
+//   .from(
+//     ".footer .link-mail_two",
+//     {
+//       opacity: 0,
+//       x: 50,
+//       duration: 0.5,
+//       ease: "power3.out",
+//     },
+//     "-=0.8"
+//   )
+//   .from(
+//     ".footer .footer_copyright",
+//     {
+//       opacity: 0,
+//       y: 50,
+//       duration: 0.5,
+//       ease: "power3.out",
+//     },
+//     "-=1.5"
+//   )
+//   .from(
+//     ".footer #back-to-top",
+//     {
+//       opacity: 0,
+//       y: 50,
+//       duration: 0.5,
+//       ease: "power3.out",
+//     },
+//     "-=1.5"
+//   );
 /* ==============================================================================
 GSAP ANIMATION  END 
    ============================================================================== */
